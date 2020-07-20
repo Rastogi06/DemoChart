@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "GaugeChart";
+}
+
+<link rel="stylesheet" type="text/css" href="~/Content/css/Styles.css" />
+<link rel="stylesheet" type="text/css" href="~/Content/font-awesome.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="~/Scripts/Chart/c3.js"></script>
+<script src="~/Scripts/Chart/d3.js"></script>
+<script src="~/Scripts/Chart/c3.min.js"></script>
+<script src="~/Scripts/Chart/d3.min.js"></script>
+
+<body>
+    <div id="gaugebg">
+        <img class="gauge-image" src="~/Content/Images/back3.jpg" />
+    </div>
+
+</body>
+
+<div class="displaydata">
+<div id="GaugeChart"></div>
+<div class="gaugeInfo">
+    <p> Please find the current occupancy inside the Cafeteria !!</p>
+</div>
+<br />
+<br />
+<div class="userProfile" style="padding-left:145px;">
+    <a href='@Url.Action("UserScreen", "Account")'><button class="btn btn-primary"><i class="fa fa-user"></i>  User Profile</button></a>
+</div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: "/Account/GetData",
+            data: {},
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                successFunc(response);
+            },
+        });
+
+        function successFunc(jsondata) {
+            var chart = c3.generate({
+                bindto: '#GaugeChart',
+                data: {
+                    columns: [
+                        ['Employee Count', jsondata]
+
+                    ],
+                    type: 'gauge',
+                },
+                gauge: {                    
+                    max: 4,
+                    width: 40,
+                    label: true                   
+
+                },
+                color: {
+                    pattern: ['#FF0000', '#F97600', '#F6C600', '#60B044'],
+                    threshold: {
+                        values: [1,2,3,4]
+                    }
+                },
+                size: {
+                    height: 180
+                }
+
+            });
+        }
+    });
+
+</script>

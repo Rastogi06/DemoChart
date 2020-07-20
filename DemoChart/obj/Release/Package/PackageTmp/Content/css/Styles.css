@@ -1,0 +1,113 @@
+﻿
+#imgbg .source-image {
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#imgbg {
+    position:absolute;
+}
+#gaugebg .gauge-image {
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.displaydata{
+    top:100px;
+    position:absolute;   
+    padding-left:372px;
+    padding-right:372px;
+}
+
+.userAuth {
+    top: 280px;
+    position: absolute;
+    padding-left: 386px;
+    padding-right: 386px;
+}
+
+.userAuth p{
+
+    color:white;
+    font-size:16px;
+}
+.heading {
+    font-weight: 700;
+    padding-left: 334px;
+    padding-right: 334px;
+    color: white;
+}
+
+.sub-heading {
+    font-weight: 500;
+    padding-left: 367px;
+    padding-right: 367px;
+    color: white;
+}
+
+.headtitle1
+{
+    position:absolute;
+    top:240px;
+}
+
+.headtitle {
+    position: absolute;
+    top: 150px;
+}
+
+.loginClass {
+    position: absolute;
+    top: 415px;
+    padding-left:494px;
+    padding-right:494px;
+}
+
+.login
+{
+    padding-left:3px;
+}
+
+.gaugeInfo {
+    text-align: center;
+    padding-top: 50px;
+    color:darkred;
+    font-size:16px;
+    font-weight:600;
+}
+
+.gauge{
+    height:200px !important;
+}
+
+.loginForm {
+    padding-top: 180px;
+    padding-left: 365px;
+}
+.row{
+    color:white;
+}
+
+.registerForm {
+    padding-top: 200px;
+    padding-left: 365px;
+}
+
+.btnsubmit{
+    position:absolute;
+}
+
+.errorMsg {
+    position: absolute;
+    font-size: 14px;
+    color: darkred;
+}
+
+.logo-image {
+    position: absolute;
+    height: 200px;
+    top: 60px;
+    left: 560px;
+}

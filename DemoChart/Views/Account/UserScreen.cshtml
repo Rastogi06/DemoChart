@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "UserScreen";
+}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/css/Styles.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="imgbg">
+        <img class="source-image" src="~/Content/Images/back1.jpg" />
+    </div>
+
+</body>
+<div class="headtitle">
+    <h1 class="heading">Welcome to Corporate Cafe</h1>
+    <br />
+</div>
+
+<br />
+<br />
+
+@if (Request.IsAuthenticated)
+{
+
+    if (User.Identity.Name.Equals("Admin@admin.com"))
+    {
+        @RenderPage("~/Views/Admin/Index.cshtml")
+    }
+    else
+    {
+
+        <div class="userAuth">
+            <p>Welcome @Html.Encode(User.Identity.Name) &nbsp; <i class="fa fa-user" aria-hidden="true"></i> </p>
+            <br />
+            <p>Please check the dashboard for current occupancy status !!  &nbsp;<i class="fa fa-tachometer" aria-hidden="true"></i></p>
+        </div>
+    }
+}
+
+else
+{
+    @RenderPage("~/Views/Account/Index.cshtml")
+
+}
+
+

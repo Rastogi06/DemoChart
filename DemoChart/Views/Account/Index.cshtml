@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/css/Styles.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+        <div id="imgbg">
+            <img class="source-image" src="~/Content/Images/back1.jpg" />
+        </div>
+
+</body>
+
+<div id="logoImg">
+    <img class="logo-image" src="~/Content/Images/food2.png" />   
+
+</div>
+
+<div class="headtitle1">
+    <h1 class="heading">Welcome to Corporate Cafe</h1>
+    <br />
+    <h4 class="sub-heading">Please Login / Register to enjoy the delicacies !!</h4>
+</div>
+
+@*@if (Request.IsAuthenticated)
+{
+
+    <span>Welcome @Html.Encode(User.Identity.Name) </span>
+}
+else
+{*@
+    <div class="loginClass">
+        <div class="login">
+            <a href='@Url.Action("Login", "Account")'><button class="btn btn-primary"><i class="fa fa-sign-in"></i>  Please Login</button></a>
+        </div>
+        <br />        
+        <div class="register">
+            <a href='@Url.Action("Register", "Account")'><button class="btn btn-primary"><i class="fa fa-user-plus"></i>  Register User</button></a>
+        </div>
+
+        @*<button class="btn btn-info"></button><i class="fas fa-sign-in" aria-hidden="true"></i> value="Please Login" onclick="location.href='@Url.Action("Login", "Account")'" />
+        <br />
+        <br />
+        <button class="btn btn-info"></button>value="Register User?" onclick="location.href='@Url.Action("Register", "Account")'" />*@
+
+
+    </div>

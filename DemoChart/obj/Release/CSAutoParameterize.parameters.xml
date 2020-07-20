@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="CAFEEntities-Web.config Connection String" description="CAFEEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=LAPTOP-N70F7248\SQLEXPRESS;initial catalog=CAFE;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\SHIVAM\ RASTOGI\\source\\repos\\DemoChart\\DemoChart\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CAFEEntities']/@connectionString" />
+  </parameter>
+  <parameter name="CAFEEntities1-Web.config Connection String" description="CAFEEntities1 Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=LAPTOP-N70F7248\SQLEXPRESS;initial catalog=CAFE;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\SHIVAM\ RASTOGI\\source\\repos\\DemoChart\\DemoChart\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CAFEEntities1']/@connectionString" />
+  </parameter>
+  <parameter name="CAFEEntities2-Web.config Connection String" description="CAFEEntities2 Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.UserDetails.csdl|res://*/Models.UserDetails.ssdl|res://*/Models.UserDetails.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=LAPTOP-N70F7248\SQLEXPRESS;initial catalog=CAFE;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\SHIVAM\ RASTOGI\\source\\repos\\DemoChart\\DemoChart\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CAFEEntities2']/@connectionString" />
+  </parameter>
+</parameters>
